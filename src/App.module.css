@@ -1,0 +1,36 @@
+/* ==================== LAYOUT ==================== */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    margin-left: 260px;
+    /* Отступ под сайдбар на десктопе */
+}
+
+.content {
+    flex: 1;
+    padding: 2rem 2.5rem;
+    background-color: #f8fafc;
+    width: 100%;
+}
+
+/* ==================== ADAPTIVE (<= 1024px) ==================== */
+@media (max-width: 1024px) {
+    .main {
+        margin-left: 0;
+        /* Убираем отступ, контент на всю ширину */
+    }
+
+    .content {
+        padding: 1.5rem 1rem;
+        /* Уменьшаем отступы на мобильных */
+    }
+}

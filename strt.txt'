@@ -1,0 +1,34 @@
+src/
+├── assets/              # Логотипы, иконки, статичные изображения
+├── components/          # Переиспользуемые UI-компоненты (без бизнес-логики)
+│   ├── ui/              # Базовые обертки над MUI (Button, TextField, StatusBadge)
+│   ├── KnowledgeCard/   # Компоненты для отображения карточки (CardHeader, CardSections)
+│   ├── Search/          # SearchBar, FilterPanel
+│   └── KPI/             # Графики Recharts (KpiGauge, KpiTrend)
+├── features/            # Бизнес-логика, сгруппированная по фичам
+│   ├── knowledge-base/  # Логика работы с карточками знаний
+│   ├── mentorship/      # Дневник наставника
+│   └── analytics/       # KPI и матрица критических знаний
+├── mocks/               # Мок-данные для MVP (10-15 карточек, пользователи, KPI)
+│   ├── knowledgeCards.ts
+│   ├── users.ts
+│   └── kpiData.ts
+├── pages/               # Страницы, привязанные к маршрутам
+│   ├── HomePage.tsx
+│   ├── SearchPage.tsx
+│   ├── CardDetailPage.tsx
+│   ├── CardNewPage.tsx
+│   ├── MentorshipPage.tsx
+│   ├── KnowledgeMapPage.tsx
+│   └── AnalyticsPage.tsx
+├── store/               # Zustand stores
+│   ├── useAuthStore.ts  # Текущий пользователь и роль
+│   └── useFilterStore.ts # Состояние фильтров поиска
+├── types/               # Глобальные TypeScript типы и интерфейсы
+│   └── index.ts
+├── utils/               # Утилиты
+│   ├── formatters.ts    # Форматирование дат, номеров ПОМО-<напр>-<номер>
+│   └── kpiCalculations.ts # Логика расчета P = I × R и K1-K5
+├── App.tsx              # Настройка React Router
+├── main.tsx             # Точка входа, провайдеры (QueryClient, Theme)
+└── vite-env.d.ts

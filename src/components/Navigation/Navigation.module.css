@@ -1,0 +1,64 @@
+.navbar {
+    background-color: #0f172a;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.logoIcon {
+    color: #60a5fa;
+}
+
+.brandTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.navLink:hover {
+    background-color: #1e293b;
+    color: white;
+}
+
+.active {
+    background-color: #2563eb;
+    color: white;
+}

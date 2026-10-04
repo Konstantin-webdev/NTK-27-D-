@@ -1,0 +1,211 @@
+/* ==================== LAYOUT ==================== */
+.topBar {
+    position: sticky;
+    top: 0;
+    height: 64px;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 1rem;
+    z-index: 50;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== MENU BUTTON (Mobile) ==================== */
+.menuButton {
+    display: none;
+    /* Скрыта на десктопе */
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.menuButton:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* ==================== SEARCH ==================== */
+.searchWrapper {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.625rem 1rem 0.625rem 2.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    background-color: #f8fafc;
+    transition: all 0.2s;
+    outline: none;
+    color: #0f172a;
+}
+
+.searchInput:focus {
+    background-color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.searchInput::placeholder {
+    color: #94a3b8;
+}
+
+/* ==================== ACTIONS ==================== */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+    /* Прижимает блок вправо */
+    flex-shrink: 0;
+}
+
+.iconButton {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.iconButton:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+.notificationBadge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+/* ==================== USER ==================== */
+.userButton {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.375rem 0.75rem 0.375rem 0.375rem;
+    border-radius: 9999px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.userButton:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.userAvatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.userName {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+/* ==================== ADAPTIVE (<= 1024px) ==================== */
+@media (max-width: 1024px) {
+    .topBar {
+        padding: 0 1rem;
+    }
+
+    .menuButton {
+        display: flex;
+        /* Показываем кнопку меню */
+    }
+
+    .searchWrapper {
+        max-width: 100%;
+        /* Поиск занимает всё доступное место */
+    }
+
+    .userName {
+        display: none;
+        /* Скрываем имя, оставляем только аватар для экономии места */
+    }
+
+    .userButton {
+        padding: 0.25rem;
+        border-radius: 50%;
+    }
+}
+
+/* ==================== ADAPTIVE (<= 640px) ==================== */
+@media (max-width: 640px) {
+    .topBar {
+        height: 56px;
+        /* Чуть ниже на телефонах */
+        gap: 0.75rem;
+    }
+
+    .searchInput {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+    }
+
+    .searchIcon {
+        left: 0.625rem;
+        width: 16px;
+        height: 16px;
+    }
+}
